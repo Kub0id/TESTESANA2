@@ -11,8 +11,14 @@ jobs:
     runs-on: self-hosted
     steps:
       - uses: actions/checkout@v3
-      - name: install-pip-deps
+        with:
+          repository: 'mtararujs/python-greetings'
+          path: 'api-tests'
+      - name: install
         run: echo instalē pip dependencies...
+      - name: install-pip-deps
+        working-directory: api-tests
+        run: pip install -r requirements.txt
   dep-to-dev:
     runs-on: self-hosted
     needs: [install-pip-dev]
