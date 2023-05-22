@@ -12,58 +12,58 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: install-pip-deps
-        run: echo buve kko...
+        run: echo instalē pip dependencies...
   dep-to-dev:
     runs-on: self-hosted
     needs: [install-pip-dev]
     steps:
       - uses: actions/checkout@v3
       - name: deploy-to-dev
-        run: echo buve kko...
+        run: echo delpoying to development...
   test-on-dev:
     runs-on: self-hosted
     needs: [dep-to-dev]
     steps:
       - uses: actions/checkout@v3.5.2
       - name: tests-on-dev
-        run: echo buve kko...
+        run: echo testing on development...
   dep-to-stag:
     runs-on: self-hosted
     needs: [test-on-dev]
     steps:
       - uses: actions/checkout@v3.5.2
       - name: deploy-to-staging
-        run: echo buve kko...
+        run: echo Deploying to staging...
   test-on-stag:
     runs-on: self-hosted
     needs: [dep-to-stag]
     steps:
       - uses: actions/checkout@v3.5.2
       - name: tests-on-staging
-        run: echo buve kko...
+        run: echo Testing on staging...
   dep-to-preprod:
     runs-on: self-hosted
     needs: [test-on-stag]
     steps:
       - uses: actions/checkout@v3.5.2
       - name: deploy-to-preprod
-        run: echo buve kko...
+        run: echo deploying to preproduction...
   test-on-preprod:
     runs-on: self-hosted
     needs: [dep-to-preprod]
     steps:
       - uses: actions/checkout@v3.5.2
       - name: tests-on-preprod
-        run: echo buve kko...
+        run: echo testing on preproduction...
   dep-to-prod:
     runs-on: self-hosted
     steps:
       - uses: actions/checkout@v3.5.2
       - name: deploy-to-prod
-        run: echo buve kko...
+        run: echo deploying to production...
   test-on-prod:
     runs-on: self-hosted
     steps:
       - uses: actions/checkout@v3.5.2
       - name: test-on-production
-        run: echo buve kko...
+        run: echo testing on production...
