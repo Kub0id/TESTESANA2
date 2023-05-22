@@ -1,1 +1,63 @@
-runs-on: self-hosted
+name: Python Greetings
+
+on:
+  push:
+    branches: ["main"]
+    
+  workflow_dispatch:
+
+jobs:
+  install-pip-dev:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v3
+      - name: install-pip-deps
+        run: echo buve kko...
+  dep-to-dev:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v3
+      - name: deploy-to-dev
+        run: echo buve kko...
+  test-on-dev:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v3
+      - name: tests-on-dev
+        run: echo buve kko...
+  dep-to-stag:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v3
+      - name: deploy-to-staging
+        run: echo buve kko...
+  test-on-stag:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v3
+      - name: tests-on-staging
+        run: echo buve kko...
+  dep-to-preprod:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v3
+      - name: deploy-to-preprod
+        run: echo buve kko...
+  test-on-preprod:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v3
+      - name: tests-on-preprod
+        run: echo buve kko...
+  dep-to-prod:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v3
+      - name: deploy-to-prod
+        run: echo buve kko...
+  test-on-prod:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v3
+      - name: test-on-production
+        run: echo buve kko...
